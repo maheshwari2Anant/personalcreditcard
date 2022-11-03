@@ -1,0 +1,233 @@
+*{
+    margin : 0px;
+    padding : 0px;
+    box-sizing : border-box;
+    font-family: 'poppins' ;
+    /* overflow: hidden; */
+}
+
+section{
+    padding:30px 0px;
+     /* position: relative; */
+    min-height: 100vh;
+    /* width: 100%;  */
+    background: #121321;
+     display:flex; 
+    justify-content: center;
+    /* align-items: center;  */
+
+}
+
+/* section::before{
+    border-radius: 50%;
+    content: "";
+    height: 240px;
+    width: 240px;
+    background: #121321;
+    transform:translate(100px,-30px); 
+    background:linear-gradient(90deg, #9bb027, #f3f5f5);
+}
+
+section::after{
+    border-radius: 50%;
+    content: "";
+    height: 240px;
+    width: 240px;
+    background: #121321;
+    transform:translate(-100px,100px); 
+    background:linear-gradient(90deg, #9c27b0, #f3f5f5)
+} */
+.container {
+    position: relative;
+    width : 375px;
+    height : 225px;
+    z-index :100;
+    /* transition: 4.20s; */
+    animation: rotation 4.2s infinite linear;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotatey(360deg) ;
+    }
+  }
+
+/* .container:hover{
+    transform:rotatey(180deg);
+} */
+.container .card{ 
+    height :100%;
+    width : 100%;
+   position:relative;
+    backdrop-filter : blur(25px);
+    background:rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0 ,0 ,0 ,0.25);    
+    border-radius: 20px;
+    color: white;
+    padding : 25px;
+/* backface-visibility: hidden; */
+
+}
+
+
+
+header{
+    display:flex;
+    
+}
+
+
+.front-face .logo img{
+    position: relative;
+    width : 70px;
+    height : 40px; 
+    
+}
+.front-face .logo h5{
+    position: relative;
+    font-weight:200;
+}
+
+
+
+.cardDetail .holdername{
+    margin-top : 18px;
+    font-weight:500;
+}
+
+.cardDetail{
+margin : 20px 0px 30px 0px;
+
+}
+.cardDetail h6{
+    font-size: 10px;
+    font-weight:100;
+}
+.cardDetail h5{
+    font-size: 18px;
+    font-weight:100;
+}
+
+
+
+.container .chip{
+    position : relative;
+    bottom : 15px;
+    left : 175px;
+    width : 80px;
+    height : 70px;
+}
+
+
+.front-face .validDate {
+   position: absolute;
+   right : 30px;
+   bottom : 25px;
+   font-weight:100; 
+   font-size: 18px;
+
+}
+
+/********************* card back################# */
+
+.card .backface{
+    transform:rotatey(180);
+}
+.backface{
+    padding : 60px;
+}
+
+.backface h6{
+    font-size: 8px;
+    font-weight: 100;
+    text-align: center;
+
+}
+
+.card .magnetic-strip{
+position:absolute;
+background: black;
+height:40px;
+left: 0px;
+top:40px;
+width:100%;
+}
+
+.backface .signature{
+    display:flex;
+    justify-content: end;
+    align-items: center;
+    margin-top:60px;
+    background:#a7a7a8;
+    height:40px;
+    width:80%;
+    border-radius: 4px;
+    text-align: right;
+    background: repeating-linear-gradient(
+    #fff, #fff 3px , #efefef 0px, #efefef 9px);
+}
+
+.signature i{
+    background:#fff;
+    border-radius:4px;
+    margin-right: -29px;
+    font-size: 12px;
+color:#000;
+padding: 4px 6px;
+
+}
+
+
+
+.backface p{
+    font-size: 8px;
+    margin-top: 20px;
+}
+
+
+
+/* !shape************/
+
+.cylinder {
+    position: relative;
+    top: 450px;
+    right:340px;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    /* transform: rotateX(-30deg); */
+    animation: animate 7s linear infinite;
+}
+@keyframes animate {
+    0% {
+      transform: rotateX(-30deg) rotateY(-60deg);
+    }
+100% {
+        transform: rotateX(0deg) rotateY(360deg);
+      
+    }
+  }
+
+.cylinder div{
+    position: absolute;
+    top :0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    transform-style : preserve-3d;
+}
+
+.cylinder div span{
+    border-radius:  20px;
+    position: absolute;
+    top : 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#1c1c1c, #898787);
+    transform:rotateY(calc(90deg * var(--i)))translateZ(150px);
+
+
+}

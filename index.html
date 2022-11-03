@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Style</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section>
+      <div class = form>
+        <form>
+          <label for="fname">First name:</label><br>
+      <input type="text" name="Name" placeholder="name" id = "yourname" maxlength="10"><br>
+      <label for="lname">last name:</label><br>
+      <input type="text" name="surname" placeholder ="surname" id="Ysurname" maxlength="13"><br>
+      <!-- <button type ="submit"  onclick="nameheres()" class="button">submit</button> -->
+    </form>
+      </div>
+      <div class="container">
+        <div class="card front-face">
+          <header>
+            <span class="logo">
+              <img src="mslogo.png" alt="" />
+              <h5>MasterCard</h5>
+              <img src="chip.png" alt=" " class="chip" />
+            </span> 
+          </header>
+          <div class="cardDetail">
+            <h6>card Number</h6>
+            <h5 class = "number">33445332 4453 4353</h5>
+            <h5 class="holdername"><span id = "fName">ANANT</span>
+              <span id = "lName" >MAHESHWARI</span></h5>
+          </div>
+
+          <div class="validDate">
+            <h5>valid Thru <br /><span>05/23</span></h5>
+          </div>
+        </div>
+
+        <div class="card backface">
+          <h6>
+            For Customer Support call +977 4343 3433 or email at
+            mastercard@gmail.com
+          </h6>
+          <span class="magnetic-strip"></span>
+          <div class="signature"><i id = "cardcv">005</i></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            nostrum dignissimos in culpa, fugiat praesentium neque magnam porro
+            consectetur ea ex quidem ipsam quae repellat suscipit, voluptatibus
+            sit dicta amet magni obcaecati!
+          </p>
+        </div>
+        
+      </div>
+      <div class="cylinder">
+        <div>
+          <span style="--i: 0"></span>
+          <span style="--i: 1"></span>
+          <span style="--i: 2"></span>
+          <span style="--i: 3"></span>
+        </div>
+      </div>
+    </section>
+    <script  src = "script.js" ></script>
+  </body>
+</html>
